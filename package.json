@@ -1,7 +1,7 @@
 {
   "name": "jovo-v4-community-hook-model-linter",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Have your Jovo model auto validated during build before using it",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",

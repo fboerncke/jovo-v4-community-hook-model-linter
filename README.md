@@ -14,7 +14,7 @@ Maintaining voice model files is hard especially when they grow and get bigger. 
 
 The **Model Linter** will auto check your voice model files against a number of rules when you run the Jovo build process. While doing this the policy is to **never break a build** but to print *meaningful warnings* on the console in case something seems odd.
 
-You may know why your are doing things as they are, so technically you can simply ignore the warnings. It is a good idea though to double check what **Model Linter** complaining about.
+You may know why your are doing things as they are, so technically you can simply ignore the warnings. It is a good idea though to double check what **Model Linter** is complaining about.
 
 ## How does Model Linter look like?
 
@@ -22,7 +22,7 @@ You may know why your are doing things as they are, so technically you can simpl
 
 An example may look as follows:
 
-![Model Linter example output on console](./images/model-linter-screenshot.png)
+![Model Linter example output on console](https://github.com/fboerncke/jovo-v4-community-hook-model-linter/blob/main/images/model-linter-screenshot.png?raw=true)
 
 ## Why should I use the Model Linter?
 
@@ -31,6 +31,7 @@ It costs nothing and may save you a lot of time! For sure you have better things
 ## Is Model Linter complete?
 
 **Definitely not**: up to now there are about ten different warning messages. Obviously you could do more.
+
 But you have to start somewhere with a project and if you like **Model Linter** then tell me and I might add more rules to the list.
 
 ## Install
