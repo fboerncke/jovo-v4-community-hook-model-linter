@@ -10,7 +10,7 @@ This hook for the [Jovo V4 Framework](https://github.com/jovotech/jovo-framework
 
 Maintaining voice model files is hard especially when they grow and get bigger. So easily you add duplicate contents without notice or use same utterances for different intents which may later lead to strange behaviour of your application at runtime.
 
-## How can Model linter help?
+## How can Model Linter help?
 
 The **Model Linter** will auto check your voice model files against a number of rules when you run the Jovo build process. While doing this the policy is to **never break a build** but to print *meaningful warnings* on the console in case something seems odd.
 
@@ -26,7 +26,7 @@ An example may look as follows:
 
 ## Why should I use the Model Linter?
 
-It costs nothing and may save you a lot of time! For sure you have better things to do.
+It costs nothing and may save you a lot of time! For sure you have better things to do 🙂
 
 ## Is Model Linter complete?
 
