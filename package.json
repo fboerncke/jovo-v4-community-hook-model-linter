@@ -1,0 +1,63 @@
+{
+  "name": "jovo-v4-community-hook-model-linter",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Have your Jovo model auto validated during build before using it",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "jest",
+    "tslint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "author": "Frank Börncke",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/fboerncke/jovo-v4-community-hook-model-linter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fboerncke/jovo-v4-community-hook-model-linter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fboerncke/jovo-v4-community-hook-model-linter/issues"
+  },
+  "dependencies": {
+    "@jovotech/framework": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^13.11.0",
+    "jest": "^25.5.4",
+    "prettier": "2.5.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
+    "tslint": "^6.1.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.17.4",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testURL": "http://localhost/",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
+  "files": [
+    "dist/src/**/*"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "jovo",
+    "hook",
+    "model",
+    "linter"
+  ]
+}
