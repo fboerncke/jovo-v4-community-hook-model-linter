@@ -1,7 +1,7 @@
-// import { Jovo } from '@jovotech/framework';
+import type { BuildPlatformContext } from "@jovotech/cli-command-build";
 import fs from "fs";
 
-export function ModelLinterHook(context: any): void {
+export function ModelLinterHook(context: BuildPlatformContext): void {
   console.log("👌 Launching Model Linter");
 
   context.locales.forEach((locale: string) => {
@@ -12,13 +12,13 @@ export function ModelLinterHook(context: any): void {
 
     const model = JSON.parse(modelJson);
     validateModel(model, locale);
-    // console.log(JSON.stringify(model, null, 2));
   });
 }
 
 /**
  * TODO:
- * - Check if EntityType exists in the model
+ * - Check if required EntityType exists in the model
+ * - ...
  *
  * @param {*} model
  * @param {*} locale
@@ -64,7 +64,7 @@ function assertNoDuplicatePhrases(model: any, locale: string): void {
  * Within the JSON model structure under the element "entityTypes" make sure that
  * there are no duplicate values/synonyms in all the entries with the name "phrases".
  *
- * In other words: you might run into problems if different entities are configured 
+ * In other words: you might run into problems if different entities are configured
  * to use the same value.
  *
  * @param {*} model
@@ -117,7 +117,7 @@ function assertNoDuplicateEntityTypeValues(model: any, locale: string): void {
  * there is no superfluous whitespace in all the entries with the name "phrases"
  *
  * In other words: you might want to trim redundant whitespace
- * 
+ *
  * @param {*} model
  * @param {*} locale
  */
@@ -145,7 +145,7 @@ function assertNoSuperfluousWhitespaceInPhrases(
  * there is no superfluous whitespace in synonyms and values
  *
  * In other words: you might want to trim redundant whitespace
- * 
+ *
  * @param {*} model
  * @param {*} locale
  */
@@ -187,12 +187,12 @@ function assertNoSuperfluousWhitespaceInEntityTypes(
 }
 
 /**
- * Within the JSON model structure under the element "intents" make sure that within the example 
+ * Within the JSON model structure under the element "intents" make sure that within the example
  * phrases the curly brackets for variables are syntactically correct
  *
  * In other words: complain about expressions like "what is your {name" or "what is your {{name}"
  * or "what is your name}"
- * 
+ *
  * @param {*} model
  * @param {*} locale
  */

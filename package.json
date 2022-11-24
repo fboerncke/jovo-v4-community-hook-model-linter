@@ -1,13 +1,13 @@
 {
   "name": "jovo-v4-community-hook-model-linter",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Have your Jovo model auto validated during build before using it",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "tsc": "tsc",
-    "test": "jest",
+    "test": "jest --testPathPattern=test ",
     "eslint": "eslint"
   },
   "author": "Frank Börncke",
@@ -21,20 +21,21 @@
     "url": "https://github.com/fboerncke/jovo-v4-community-hook-model-linter/issues"
   },
   "dependencies": {
-    "@jovotech/framework": "^4.0.0"
+    "@jovotech/framework": "^4.0.0",
+    "@jovotech/cli-command-build": "^4.1.8"
   },
   "devDependencies": {
-    "@types/jest": "^25.2.3",
+    "@types/jest": "^27.0.2",
     "@types/node": "^13.11.0",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "eslint": "^8.27.0",
-    "jest": "^25.5.4",
+    "jest": "^27.3.1",
     "prettier": "2.5.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^25.3.1",
+    "ts-jest": "^27.0.7",
     "typedoc": "^0.17.4",
-    "typescript": "^3.8.3"
+    "typescript": "^4.2.3"
   },
   "jest": {
     "transform": {

@@ -1,10 +1,18 @@
 <a href= "https://prototypefund.de/project/voice-ql-datentabellen-mit-gesprochener-sprache-barrierefrei-erkunden/"><img src="./images/assets/voice-ql-ring.png" width="40%" height="40%" align="right"></a>
 
-# Model Linter Hook for Jovo V4
+# Model Linter for Jovo V4
 
 ## Overview
 
-This hook for the [Jovo V4 Framework](https://github.com/jovotech/jovo-framework) will auto check your model files against a number of rules when you run the build process.
+Small flaws in your voice model can cause serious malfunctions at runtime. 
+
+A concept frequently used in software development is called "[linting](https://en.wikipedia.org/wiki/Lint_(software))". Linting refers to the process of static code analysis and is used to flag programming errors, bugs, stylistic errors and suspicious constructs.
+
+Surprisingly I don't see this concept being used often with voice model files though I see a big potential here.
+ 
+This is why I collected some of my voice model test scripts and bundled them together as a Jovo extension. This hook for the [Jovo V4 Framework](https://github.com/jovotech/jovo-framework) will auto check your model files against a number of rules when you run the build process.
+
+You can easily integrate this "hook" into your build process by following this documentation.
 
 ## Voice model maintenance is hard
 
@@ -18,7 +26,7 @@ You may know why your are doing things as they are, so technically you can simpl
 
 ## How does Model Linter look like?
 
-**Model Linter** hooks into the build process. It remains silent if there is nothing to say. In case some rule is violated the you will see a warning message on the console. The message is intended to support you with where the problem is and how to fix it.
+**Model Linter** hooks into the build process. It remains silent if there is nothing to say. In case some rule is violated then you will see a warning message on the console. The message is intended to support you with information about where the problem is and how to maybe fix it.
 
 An example may look as follows:
 
@@ -30,9 +38,7 @@ It costs nothing and may save you a lot of time! For sure you have better things
 
 ## Is Model Linter complete?
 
-**Definitely not**: up to now there are about ten different warning messages. Obviously you could do more.
-
-But you have to start somewhere with a project and if you like **Model Linter** then tell me and I might add more rules to the list.
+**Definitely not**: up to now there are about ten different warning messages. Obviously you could do more. But you have to start somewhere with a project and if you like **Model Linter** then tell me and I might add more rules to the list.
 
 ## Install
 
@@ -46,7 +52,7 @@ From the console you may install the hook right into your Jovo project and save 
 
 Register the hook in:
 
-jovo.project.js:
+`jovo.project.js`:
 
 ```javascript
 const { ModelLinterHook } = require("jovo-v4-community-hook-model-linter");
@@ -58,7 +64,7 @@ const project = new ProjectConfig({
 
 ```
 
-jovo.project.ts:
+`jovo.project.ts`:
 
 ```typescript
 import { ModelLinterHook } from "jovo-v4-community-hook-model-linter";
@@ -68,6 +74,16 @@ const project = new ProjectConfig({
     'before.build:platform': [ModelLinterHook],
   }, // [...]
 ```
+
+## Further reading
+
+When defining your voice model it is important to know and respect the rules and limitations from a target platform. Therefore the following might be wort a read:
+
+- Alexa platform: "Rules for sample utterances":
+
+  https://developer.amazon.com/en-US/docs/alexa/custom-skills/create-intents-utterances-and-slots.html#h3_intentref_rules
+
+
 
 ## License
 
